@@ -5,5 +5,5 @@ This is a Rmarkdown template package that provides templates for several mathema
 ## Installation
 
 ```
-devtools::install("dylanjm/Rtemplates", subdir = "StatsBYUI")
+devtools::install_github("dylanjm/Rtemplates", subdir = "StatsBYUI")
 ```
