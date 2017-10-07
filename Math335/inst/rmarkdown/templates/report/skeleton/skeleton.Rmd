@@ -1,0 +1,41 @@
+---
+title: "Analysis Title Here"
+author: "Your Name Here"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: 
+  html_document: 
+    code_folding: hide
+    keep_md: yes
+    fig_height: 6
+    fig_width: 12
+    fig_align: 'center'
+    warning: FALSE
+    message: FALSE
+---
+
+```{r load_libraries, include = FALSE}
+# Use this R-Chunk to load all your libraries!
+library(tidyverse)
+```
+
+```{r load_data, include= FALSE}
+# Use this R-Chunk to load all your datasets!
+```
+
+## Background
+
+## Data Wrangling
+
+```{r tidy_data}
+# Use this R-Chunk to clean & wrangle your data!
+
+```
+
+## Data Visualization
+
+```{r plot_data}
+# Use this R-Chunk to plot & visualize your data!
+
+```
+
+## Analysis
