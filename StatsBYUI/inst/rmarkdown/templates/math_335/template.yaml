@@ -1,4 +1,5 @@
 name: Math 335 Analysis
+date: "`r format(Sys.time(), '%B %d, %Y')`"
 description: >
   Analysis report template for the BYU-Idaho Data Science Math 335 class - Data Wrangling & Visualization.
 create_dir: false
