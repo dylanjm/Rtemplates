@@ -1,8 +1,8 @@
 Package: StatsBYUI
-Title: What the Package Does (one line, title case)
-Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Title: Predefined Templates for Statistic Classes at BYU-Idaho
+Version: 0.0.3
+Authors@R: person("Dylan", "McDowell", email = "dylan.mcdowell226@gmail.com", role = c("aut", "cre"))
+Description: A comprehensive template package used by several mathematics courses offered at BYU-Idaho. 
 Depends: R (>= 3.4.2)
 License: What license is it under?
 Encoding: UTF-8
