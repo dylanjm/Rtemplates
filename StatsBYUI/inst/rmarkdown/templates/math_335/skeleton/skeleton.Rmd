@@ -10,7 +10,7 @@ output: StatsBYUI::math335_analysis
 library(tidyverse)
 ```
 
-```{r load_data, include= FALSE}
+```{r load_data, include = FALSE}
 # Use this R-Chunk to load all your datasets!
 
 ```
