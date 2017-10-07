@@ -1,9 +1,0 @@
-Package: Math335
-Title: HTML Template for BYU-I Class Math 335
-Version: 0.0.0.9000
-Authors@R: person("Dylan", "McDowell", email = "mcd12001@byui.edu", role = c("aut", "cre"))
-Description: A template created for the specific use in Math 335 at BYU-Idaho. This package will allow students to easily create their .rmd files from week to week.
-Depends: R (>= 3.4.2)
-License: What license is it under?
-Encoding: UTF-8
-LazyData: true

@@ -2,14 +2,7 @@
 title: "Analysis Title Here"
 author: "Your Name Here"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
-output: 
-  html_document: 
-    theme: cerulean
-    fig_align: center
-    fig_height: 6
-    fig_width: 12
-    message: no
-    warning: no
+output: Math325::math325_analysis
 ---
 
 ```{r load_library, include=FALSE}
