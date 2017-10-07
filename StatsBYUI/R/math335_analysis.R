@@ -17,7 +17,7 @@ math335_analysis <- function() {
 
   # call the base html_document function
   rmarkdown::html_document(code_folding = "hide",
-                           keep_md = "yes",
+                           keep_md = TRUE,
                            fig_height = 6,
                            fig_width = 12,
                            fig_align = 'center',
