@@ -1,0 +1,9 @@
+Package: HomeworkBYUI
+Title: LaTeX Homework Template
+Version: 0.1
+Authors@R: person("Dylan", "McDowell", email = "dylan.mcdowell226@gmail.com", role = c("aut", "cre"))
+Description: Doesn't really need a full description. Specifically made for Math HW in mind. 
+Depends: R (>= 3.4.2)
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
