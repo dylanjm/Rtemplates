@@ -6,4 +6,8 @@ This is a Rmarkdown template package that provides templates for several mathema
 
 ```
 devtools::install_github("dylanjm/Rtemplates", subdir = "StatsBYUI")
+
+or
+
+devtools::install_github("dylanjm/Rtemplates", subdir = "HomeworkBYUI")
 ```
