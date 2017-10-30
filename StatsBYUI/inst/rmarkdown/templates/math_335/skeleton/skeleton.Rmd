@@ -15,13 +15,16 @@ output:
     fig_align: 'center'
 ---
 
-```{r load_libraries, include = FALSE}
+```{r load_libraries}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
 # Use this R-Chunk to load all your libraries!
+#install.packages("tidyverse") # run this line once in console to get package
 library(tidyverse)
+
 ```
 
 ```{r load_data, include = FALSE}
-# Use this R-Chunk to load all your datasets!
+# Use this R-Chunk to import all your datasets!
 
 ```
 
