@@ -1,8 +1,18 @@
 ---
-title: "Analysis Title Here"
-author: "Your Name Here"
+title: "CASE STUDY TITLE"
+author: "YOUR NAME"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
-output: StatsBYUI::math335_analysis
+output:
+  html_document:  
+    keep_md: true
+    toc: true
+    toc_float: true
+    code_folding: hide
+    warning: false
+    message: false
+    fig_height: 6
+    fig_weidth: 12
+    fig_align: 'center'
 ---
 
 ```{r load_libraries, include = FALSE}
