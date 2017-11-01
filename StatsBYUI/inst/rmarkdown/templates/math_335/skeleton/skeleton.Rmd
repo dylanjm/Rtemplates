@@ -8,8 +8,6 @@ output:
     toc: true
     toc_float: true
     code_folding: hide
-    warning: false
-    message: false
     fig_height: 6
     fig_weidth: 12
     fig_align: 'center'
@@ -23,12 +21,14 @@ library(tidyverse)
 
 ```
 
-```{r load_data, include = FALSE}
+```{r load_data}
 # Use this R-Chunk to import all your datasets!
 
 ```
 
 ## Background
+
+_Place Task Background Here_
 
 ## Data Wrangling
 
@@ -44,4 +44,4 @@ library(tidyverse)
 
 ```
 
-## Analysis
+## Conclusions
