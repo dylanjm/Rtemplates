@@ -13,8 +13,11 @@ output:
     fig_align: 'center'
 ---
 
-```{r load_libraries}
+```{r, echo=FALSE}
 knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+```{r load_libraries, include=FALSE}
 # Use this R-Chunk to load all your libraries!
 #install.packages("tidyverse") # run this line once in console to get package
 library(tidyverse)
