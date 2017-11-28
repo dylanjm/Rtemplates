@@ -1,27 +1,27 @@
 \documentclass[11pt, letterpaper]{article}
+\usepackage[T1]{fontenc}
 
-$if(beamerarticle)$
-\usepackage{beamerarticle} % needs to be loaded first
-$endif$
 \usepackage{tikz}
 \usetikzlibrary{positioning, calc}
 \usetikzlibrary{shapes,backgrounds}
 \usepackage{xcolor}
 \usepackage{soul}
-\newcommand{\mathcolorbox}[2]{\colorbox{#1}{$$\displaystyle #2$$}}
 \usepackage{mathtools}
 \usepackage{tikz-qtree}
 \usepackage{wasysym}
 \usepackage{tcolorbox}
-\newcommand\Myperm[2][^n]{\prescript{#1\mkern-2.5mu}{}P_{#2}}
-\newcommand\Mycomb[2][^n]{\prescript{#1\mkern-0.5mu}{}C_{#2}}
 
+
+
+\newcommand{\mathcolorbox}[2]{\colorbox{#1}{$$\displaystyle #2$$}}
 \newcommand\proba{P(A)}
 \newcommand\probb{P(B)}
 \newcommand{\probint}[2]{P(#1 \cap #2)}
 \newcommand{\probun}[2]{P(#1 \cup #2)}
 \newcommand{\conprob}[2]{P(#1 | #2)}
 \newcommand{\bayes}[2]{\frac{P(#2 | #1)P(#1)}{P(#2)}}
+\newcommand\Myperm[2][^n]{\prescript{#1\mkern-2.5mu}{}P_{#2}}
+\newcommand\Mycomb[2][^n]{\prescript{#1\mkern-0.5mu}{}C_{#2}}
 
 %
 % Homework Details
@@ -34,25 +34,19 @@ $endif$
 %
 
 
-$if(fontfamily)$
-\usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
-$else$
-\usepackage[T1]{fontenc}
-$endif$
-$if(linestretch)$
-\usepackage{setspace}
-\setstretch{$linestretch$}
-$endif$
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
   \usepackage[utf8]{inputenc}
+
 $if(euro)$
   \usepackage{eurosym}
 $endif$
+
 \else % if luatex or xelatex
+
 $if(mathspec)$
   \ifxetex
     \usepackage{mathspec}
@@ -62,22 +56,12 @@ $if(mathspec)$
 $else$
   \usepackage{unicode-math}
 $endif$
+
   \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
 $for(fontfamilies)$
   \newfontfamily{$fontfamilies.name$}[$fontfamilies.options$]{$fontfamilies.font$}
 $endfor$
-$if(euro)$
-  \newcommand{\euro}{€}
-$endif$
-$if(mainfont)$
-    \setmainfont[$for(mainfontoptions)$$mainfontoptions$$sep$,$endfor$]{$mainfont$}
-$endif$
-$if(sansfont)$
-    \setsansfont[$for(sansfontoptions)$$sansfontoptions$$sep$,$endfor$]{$sansfont$}
-$endif$
-$if(monofont)$
-    \setmonofont[Mapping=tex-ansi$if(monofontoptions)$,$for(monofontoptions)$$monofontoptions$$sep$,$endfor$$endif$]{$monofont$}
-$endif$
+
 $if(mathfont)$
 $if(mathspec)$
   \ifxetex
