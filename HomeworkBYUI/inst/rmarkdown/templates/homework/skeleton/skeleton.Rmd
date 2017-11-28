@@ -9,6 +9,5 @@ topic: "Chapter x.x"
 misc: "i.e. X Points Possible"
 geometry: margin=1in, headsep=.5in
 graphics: yes
-output: HomeworkBYUI::homework_pdf
 ---
 # Problem 1
