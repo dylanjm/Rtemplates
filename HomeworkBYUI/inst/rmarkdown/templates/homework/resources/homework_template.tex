@@ -41,7 +41,6 @@
   \usepackage[utf8]{inputenc}
 \else % if luatex or xelatex
 
-
 $if(mathspec)$
   \ifxetex
     \usepackage{mathspec}
@@ -69,8 +68,12 @@ $else$
 $endif$
 $endif$
 
-\fi
 
+$if(CJKmainfont)$
+    \usepackage{xeCJK}
+    \setCJKmainfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
+$endif$
+\fi
 
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
