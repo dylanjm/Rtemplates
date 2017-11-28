@@ -1,5 +1,6 @@
 \documentclass[11pt, letterpaper]{article}
 \usepackage[T1]{fontenc}
+\usepackage[margin=1in, headsep=.5in]{geometry}
 
 \usepackage{tikz}
 \usetikzlibrary{positioning, calc}
@@ -40,11 +41,6 @@
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
   \usepackage[utf8]{inputenc}
-
-$if(euro)$
-  \usepackage{eurosym}
-$endif$
-
 \else % if luatex or xelatex
 
 $if(mathspec)$
@@ -116,9 +112,9 @@ $endif$
 $if(verbatim-in-note)$
 \VerbatimFootnotes % allows verbatim text in footnotes
 $endif$
-$if(geometry)$
-\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
-$endif$
+
+
+
 $if(lang)$
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[shorthands=off,$for(babel-otherlangs)$$babel-otherlangs$,$endfor$main=$babel-lang$]{babel}
