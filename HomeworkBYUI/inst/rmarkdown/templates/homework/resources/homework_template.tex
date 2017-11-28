@@ -31,6 +31,10 @@
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
 
 \usepackage{tikz}
 \usetikzlibrary{positioning, calc}
@@ -41,6 +45,8 @@
 \usepackage{tikz-qtree}
 \usepackage{wasysym}
 \usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
 
 \newcommand{\mathcolorbox}[2]{\colorbox{#1}{$$\displaystyle #2$$}}
 \newcommand\proba{P(A)}
@@ -53,14 +59,22 @@
 \newcommand\Mycomb[2][^n]{\prescript{#1\mkern-0.5mu}{}C_{#2}}
 
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Initialize Verbatim Settings & Microtype
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \IfFileExists{microtype.sty}{% use microtype if available
 \usepackage[protrusion=true,expansion=true]{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
+$if(verbatim-in-note)$
+\VerbatimFootnotes % allows verbatim text in footnotes
+$endif$
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dealing with URLS, Links, Meta Data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
 \usepackage[unicode=true]{hyperref}
 \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
@@ -71,9 +85,7 @@
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
 
-$if(verbatim-in-note)$
-\VerbatimFootnotes % allows verbatim text in footnotes
-$endif$
+
 
 $if(listings)$
 \usepackage{listings}
@@ -87,17 +99,6 @@ $if(tables)$
 \usepackage{longtable,booktabs}
 % Fix footnotes in tables (requires footnote package)
 \IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{long table}}{}
-$endif$
-
-$if(links-as-notes)$
-% Make links footnotes instead of hotlinks:
-\renewcommand{\href}[2]{#2\footnote{\url{#1}}}
-$endif$
-
-$if(strikeout)$
-\usepackage[normalem]{ulem}
-% avoid problems with \sout in headers with hyperref:
-\pdfstringdefDisableCommands{\renewcommand{\sout}{}}
 $endif$
 
 $if(indent)$
@@ -133,10 +134,7 @@ $else$
 \fi
 $endif$
 
-% set default figure placement to htbp
-\makeatletter
-\def\fps@figure{htbp}
-\makeatother
+
 
 \newcommand{\hmwkTitle}{$title$}
 \newcommand{\hmwkDueDate}{$due$}
@@ -151,16 +149,13 @@ $endif$
 
 \title{
     \vspace{2in}
-    \textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+    \textmd{\textbf{\hmwkClass: \ \hmwkTitle}}\\
     \normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate}\\
     \vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}} \\
     \vspace{0.1in}\large{\textbf{\hmwkAuthorName}}
     \vspace{3in}
 }
 
-
-\usepackage{fancyhdr}
-\usepackage{lastpage}
 
 \fancypagestyle{fullstyle}
 {
