@@ -7,6 +7,17 @@
 % To be used for primarily Mathematics & Computer Science Homework.
 % most values are hardcoded into the LaTeX template and not dynamic
 % from the .RMD YAML.
+%
+% Homework Details
+%   - Title
+%   - Date
+%   - Author
+%   - Class
+%   - Professor
+%   - Due Date
+%   - Topic
+%   - Misc
+%
 \documentclass[11pt, letterpaper]{article}
 \usepackage[T1]{fontenc}
 \usepackage[margin=1in, headsep=.5in]{geometry}
@@ -41,15 +52,7 @@
 \newcommand\Myperm[2][^n]{\prescript{#1\mkern-2.5mu}{}P_{#2}}
 \newcommand\Mycomb[2][^n]{\prescript{#1\mkern-0.5mu}{}C_{#2}}
 
-%
-% Homework Details
-%   - Title
-%   - Due date
-%   - Class
-%   - Section/Time
-%   - Instructor
-%   - Author
-%
+
 
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -172,13 +175,15 @@ $endif$
    \fancyhead[LO,LE]{\small $title$ \\ $topic$ \\ $misc$}
    \fancyhead[RE,RO]{\small $author$ \\ $class$ \\ $date$}
 }
+
 \pagestyle{fullstyle}
 
 \begin{document}
 $if(title-page)$
 \maketitle
-$endif$
 \thispagestyle{empty}
+$endif$
+
 \pagebreak
 \thispagestyle{firststyle}
 \vskip 13.5pt\relax \normalsize\fontsize{11}{12}
