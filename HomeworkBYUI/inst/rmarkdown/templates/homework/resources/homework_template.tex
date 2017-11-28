@@ -51,27 +51,10 @@ $if(colorlinks)$
 \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
 $endif$
 
-\hypersetup{
-$if(title-meta)$
-            pdftitle={$title-meta$},
-$endif$
-
-$if(author-meta)$
-            pdfauthor={$author-meta$},
-$endif$
-
-$if(keywords)$
-            pdfkeywords={$for(keywords)$$keywords$$sep$, $endfor$},
-$endif$
-
-$if(colorlinks)$
-            colorlinks=true,
-            linkcolor=$if(linkcolor)$$linkcolor$$else$maroon$endif$,
-            citecolor=$if(citecolor)$$citecolor$$else$blue$endif$,
-            urlcolor=$if(urlcolor)$$urlcolor$$else$blue$endif$,
-$else$
-            pdfborder={0 0 0},
-$endif$
+\hypersetup{pdftitle={$title$},
+            pdfauthor={$author$},
+            pdfkeywords={$class$},
+            colorlinks=true, linkcolor=maroon, citecolor=blue, urlcolor=blue,
             breaklinks=true}
 
 \urlstyle{same}  % don't use monospace font for urls
