@@ -32,16 +32,15 @@
 %   - Author
 %
 
-
-
-
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+
 % use microtype if available
 \IfFileExists{microtype.sty}{%
-\usepackage[$for(microtypeoptions)$$microtypeoptions$$sep$,$endfor$]{microtype}
+\usepackage[protrusion=true,expansion=true]{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
+
 \PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
 $if(verbatim-in-note)$
 \usepackage{fancyvrb}
@@ -57,7 +56,7 @@ $endif$
             colorlinks=true, linkcolor=maroon, citecolor=blue, urlcolor=blue,
             breaklinks=true}
 
-\urlstyle{same}  % don't use monospace font for urls
+%\urlstyle{same}  % don't use monospace font for urls
 
 $if(verbatim-in-note)$
 \VerbatimFootnotes % allows verbatim text in footnotes
