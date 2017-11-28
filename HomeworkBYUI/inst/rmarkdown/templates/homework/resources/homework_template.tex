@@ -1,3 +1,12 @@
+% BYU-Idaho LaTeX/Rmarkdown Homework Template
+% Dylan McDowell - December 2017
+% Github: https://github.com/dylanjm
+% Rtemplates - HomeworkBYUI
+% devtools::install_github("dylanjm/Rtemplates", subdir = "HomeworkBYUI")
+%
+% To be used for primarily Mathematics & Computer Science Homework.
+% most values are hardcoded into the LaTeX template and not dynamic
+% from the .RMD YAML.
 \documentclass[11pt, letterpaper]{article}
 \usepackage[T1]{fontenc}
 \usepackage[margin=1in, headsep=.5in]{geometry}
@@ -75,9 +84,6 @@ $if(verbatim-in-note)$
 \VerbatimFootnotes % allows verbatim text in footnotes
 $endif$
 
-
-
-
 $if(natbib)$
 \usepackage{natbib}
 \bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
@@ -152,28 +158,28 @@ $else$
 \fi
 $endif$
 
-$if(dir)$
-\ifxetex
-  % load bidi as late as possible as it modifies e.g. graphicx
-  $if(latex-dir-rtl)$
-  \usepackage[RTLdocument]{bidi}
-  $else$
-  \usepackage{bidi}
-  $endif$
-\fi
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
-  \TeXXeTstate=1
-  \newcommand{\RL}[1]{\beginR #1\endR}
-  \newcommand{\LR}[1]{\beginL #1\endL}
-  \newenvironment{RTL}{\beginR}{\endR}
-  \newenvironment{LTR}{\beginL}{\endL}
-\fi
-$endif$
+% $if(dir)$
+% \ifxetex
+%   % load bidi as late as possible as it modifies e.g. graphicx
+%   $if(latex-dir-rtl)$
+%   \usepackage[RTLdocument]{bidi}
+%   $else$
+%   \usepackage{bidi}
+%   $endif$
+% \fi
+% \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+%   \TeXXeTstate=1
+%   \newcommand{\RL}[1]{\beginR #1\endR}
+%   \newcommand{\LR}[1]{\beginL #1\endL}
+%   \newenvironment{RTL}{\beginR}{\endR}
+%   \newenvironment{LTR}{\beginL}{\endL}
+% \fi
+% $endif$
 
 % set default figure placement to htbp
-% \makeatletter
-% \def\fps@figure{htbp}
-% \makeatother
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
 
 \newcommand{\hmwkTitle}{$title$}
 \newcommand{\hmwkDueDate}{$due$}
