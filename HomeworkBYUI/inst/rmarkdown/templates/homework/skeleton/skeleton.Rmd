@@ -8,7 +8,6 @@ due: "date"
 topic: "Chapter x.x"
 misc: "i.e. X Points Possible"
 geometry: margin=1in, headsep=.5in
-fontsize: 11pt
 graphics: yes
 output: HomeworkBYUI::homework_pdf
 ---
