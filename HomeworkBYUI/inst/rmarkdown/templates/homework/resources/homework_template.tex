@@ -59,17 +59,13 @@
 }{}
 
 \PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
-
 \usepackage[unicode=true]{hyperref}
-
 \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
-
 \hypersetup{pdftitle={$title$},
             pdfauthor={$author$},
             pdfkeywords={$class$},
             colorlinks=true, linkcolor=., citecolor=maroon, urlcolor=blue,
             breaklinks=true}
-
 \urlstyle{same}  % don't use monospace font for urls
 
 $if(verbatim-in-note)$
@@ -172,8 +168,8 @@ $endif$
 \fancypagestyle{firststyle}
 {
    \fancyhf{}
-   \fancyhead[C]{\raisebox{5ex}{\small $topic$}}
-   \fancyhead[LO,LE]{\small $title$ \\ $misc$}
+   %\fancyhead[C]{\raisebox{5ex}{\small $topic$}}
+   \fancyhead[LO,LE]{\small $title$ \\ $topic$ \\ $misc$}
    \fancyhead[RE,RO]{\small $author$ \\ $class$ \\ $date$}
 }
 \pagestyle{fullstyle}
