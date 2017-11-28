@@ -12,8 +12,6 @@
 \usepackage{wasysym}
 \usepackage{tcolorbox}
 
-
-
 \newcommand{\mathcolorbox}[2]{\colorbox{#1}{$$\displaystyle #2$$}}
 \newcommand\proba{P(A)}
 \newcommand\probb{P(B)}
@@ -69,11 +67,10 @@ $else$
   \setmathfont[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
 $endif$
 $endif$
-$if(CJKmainfont)$
-    \usepackage{xeCJK}
-    \setCJKmainfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
-$endif$
-\fi
+
+
+
+
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 % use microtype if available
@@ -89,16 +86,20 @@ $endif$
 $if(colorlinks)$
 \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
 $endif$
+
 \hypersetup{
 $if(title-meta)$
             pdftitle={$title-meta$},
 $endif$
+
 $if(author-meta)$
             pdfauthor={$author-meta$},
 $endif$
+
 $if(keywords)$
             pdfkeywords={$for(keywords)$$keywords$$sep$, $endfor$},
 $endif$
+
 $if(colorlinks)$
             colorlinks=true,
             linkcolor=$if(linkcolor)$$linkcolor$$else$maroon$endif$,
@@ -108,7 +109,9 @@ $else$
             pdfborder={0 0 0},
 $endif$
             breaklinks=true}
+
 \urlstyle{same}  % don't use monospace font for urls
+
 $if(verbatim-in-note)$
 \VerbatimFootnotes % allows verbatim text in footnotes
 $endif$
