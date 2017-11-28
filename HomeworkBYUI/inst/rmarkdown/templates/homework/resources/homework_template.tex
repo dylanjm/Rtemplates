@@ -53,29 +53,22 @@
 
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-
-% use microtype if available
-\IfFileExists{microtype.sty}{%
+\IfFileExists{microtype.sty}{% use microtype if available
 \usepackage[protrusion=true,expansion=true]{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
 
 \PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
 
-$if(verbatim-in-note)$
-\usepackage{fancyvrb}
-$endif$
-
 \usepackage[unicode=true]{hyperref}
 
-$if(colorlinks)$
 \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
 $endif$
 
 \hypersetup{pdftitle={$title$},
             pdfauthor={$author$},
             pdfkeywords={$class$},
-            colorlinks=true, linkcolor=., citecolor=., urlcolor=blue,
+            colorlinks=true, linkcolor=., citecolor=maroon, urlcolor=blue,
             breaklinks=true}
 
 \urlstyle{same}  % don't use monospace font for urls
@@ -87,10 +80,6 @@ $endif$
 $if(listings)$
 \usepackage{listings}
 $endif$
-
-% $if(lhs)$
-% \lstnewenvironment{code}{\lstset{language=Haskell,basicstyle=\small\ttfamily}}{}
-% $endif$
 
 $if(highlighting-macros)$
 $highlighting-macros$
