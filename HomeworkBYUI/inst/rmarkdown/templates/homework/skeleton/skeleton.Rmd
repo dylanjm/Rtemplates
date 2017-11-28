@@ -1,14 +1,13 @@
 ---
 title: "Homework Title"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
-author: Dylan McDowell
-class: "Class #Num"
-topic: "Section x.x"
-questions: |
-  | 1, 2, 3, 4, 5
+author: "Dylan McDowell"
+class: "Course Code"
+professor: "Professor Name"
 due: "date"
+topic: "Chapter x.x"
+misc: "i.e. X Points Possible"
 geometry: margin=1in, headsep=.5in
-fontfamily: mathpazo
 fontsize: 11pt
 graphics: yes
 output: HomeworkBYUI::homework_pdf
