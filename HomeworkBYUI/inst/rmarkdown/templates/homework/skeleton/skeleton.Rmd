@@ -7,5 +7,6 @@ professor: "Professor Name"
 due: "date"
 topic: "Chapter x.x"
 misc: "i.e. X Points Possible"
+output: HomeworkBYUI::homework_pdf
 ---
 # Problem 1
