@@ -108,10 +108,6 @@ $if(tables)$
 \IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{long table}}{}
 $endif$
 
-
-
-
-
 $if(links-as-notes)$
 % Make links footnotes instead of hotlinks:
 \renewcommand{\href}[2]{#2\footnote{\url{#1}}}
@@ -244,31 +240,7 @@ $endfor$
 \pagebreak
 \thispagestyle{firststyle}
 \vskip 13.5pt\relax \normalsize\fontsize{11}{12}
-$if(abstract)$
-\begin{abstract}
-$abstract$
-\end{abstract}
-$endif$
 
-$for(include-before)$
-$include-before$
-
-$endfor$
-$if(toc)$
-{
-$if(colorlinks)$
-\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
-$endif$
-\setcounter{tocdepth}{$toc-depth$}
-\tableofcontents
-}
-$endif$
-$if(lot)$
-\listoftables
-$endif$
-$if(lof)$
-\listoffigures
-$endif$
 $body$
 
 $if(natbib)$
