@@ -171,29 +171,9 @@ $if(dir)$
 $endif$
 
 % set default figure placement to htbp
-\makeatletter
-\def\fps@figure{htbp}
-\makeatother
-
-$for(header-includes)$
-$header-includes$
-$endfor$
-
-% $if(title)$
-% \title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
-% $endif$
-% $if(subtitle)$
-% \providecommand{\subtitle}[1]{}
-% \subtitle{$subtitle$}
-% $endif$
-% $if(author)$
-% \author{$for(author)$$author$$sep$ \and $endfor$}
-% $endif$
-% $if(institute)$
-% \providecommand{\institute}[1]{}
-% \institute{$for(institute)$$institute$$sep$ \and $endfor$}
-% $endif$
-% \date{$date$}
+% \makeatletter
+% \def\fps@figure{htbp}
+% \makeatother
 
 \newcommand{\hmwkTitle}{$title$}
 \newcommand{\hmwkDueDate}{$due$}
