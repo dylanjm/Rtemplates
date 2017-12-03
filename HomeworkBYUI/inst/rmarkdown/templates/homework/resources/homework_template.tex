@@ -58,7 +58,6 @@
 \newcommand\Myperm[2][^n]{\prescript{#1\mkern-2.5mu}{}P_{#2}}
 \newcommand\Mycomb[2][^n]{\prescript{#1\mkern-0.5mu}{}C_{#2}}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Initialize Verbatim Settings & Microtype
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -84,8 +83,6 @@ $endif$
             colorlinks=true, linkcolor=., citecolor=maroon, urlcolor=blue,
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
-
-
 
 $if(listings)$
 \usepackage{listings}
@@ -134,8 +131,9 @@ $else$
 \fi
 $endif$
 
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Setting up Homework Inputs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\hmwkTitle}{$title$}
 \newcommand{\hmwkDueDate}{$due$}
 \newcommand{\hmwkClass}{$class$}
@@ -143,13 +141,12 @@ $endif$
 \newcommand{\hmwkClassInstructor}{Professor $professor$}
 \newcommand{\hmwkAuthorName}{\textbf{$author$}}
 
-%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Title Page
-%
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{
     \vspace{2in}
-    \textmd{\textbf{\hmwkClass: \hmwkTitle}}\\
+    \textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
     \normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate}\\
     \vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}} \\
     \vspace{0.1in}\large{\textbf{\hmwkAuthorName}}
