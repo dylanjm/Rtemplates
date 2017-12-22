@@ -193,11 +193,10 @@ $if(title-page)$
 $endif$
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Setting Task Formatting
+% Set Task Formatting
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \DeclareInstance{tasks}{alphabetize-parens}{default}{
-  counter-format = { (tsk[a]) },
-  label-width    = 1.333em,
+  counter-format = { (\textbf{tsk[a]}) }
 }
 
 \settasks{style=alphabetize-parens}
