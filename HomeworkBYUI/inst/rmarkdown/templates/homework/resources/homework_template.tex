@@ -192,6 +192,16 @@ $if(title-page)$
 \pagenumbering{arabic}
 $endif$
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Setting Task Formatting
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\DeclareInstance{tasks}{alphabetize-parens}{default}{
+  counter-format = { (tsk[a]) },
+  label-width    = 1.333em,
+}
+
+\settasks{style=alphabetize-parens}
+
 \thispagestyle{firststyle}
 
 $body$
