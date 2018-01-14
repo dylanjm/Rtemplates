@@ -20,5 +20,7 @@ homework_pdf <- function() {
                               package = "HomeworkBYUI")
 
   # call the base pdf_document function
-  rmarkdown::pdf_document(template = template_file, highlight = "tango")
+  rmarkdown::pdf_document(template = template_file,
+                          highlight = "tango",
+                          latex_engine = "pdflatex")
 }
