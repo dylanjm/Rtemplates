@@ -60,6 +60,7 @@
 \usepackage{subcaption}
 \usepackage{array}
 \usepackage{tabularx}
+\usepackage[symbol]{footmisc}
 
 \newcommand{\mathcolorbox}[2]{\colorbox{#1}{$$\displaystyle #2$$}}
 \newcommand\proba{P(A)}
@@ -193,6 +194,8 @@ $endif$
 \DeclareInstance{tasks}{alphabetize-parens}{default}{
   counter-format = { (tsk[a]) }
 }
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Solution Environment
