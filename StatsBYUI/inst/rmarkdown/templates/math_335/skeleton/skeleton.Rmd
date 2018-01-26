@@ -9,7 +9,7 @@ output:
     toc_float: true
     code_folding: hide
     fig_height: 6
-    fig_weidth: 12
+    fig_width: 12
     fig_align: 'center'
 ---
 
