@@ -26,8 +26,34 @@ stats_presentation <- function() {
                           'byuilogo.png',
                           package = "StatsPresentation")
 
-  # call the base pdf_document function
-  rmarkdown::beamer_presentation(template = template_file,
-                          highlight = "kate",
-                          latex_engine = "pdflatex")
+  pre_knit <- function(input, ...) {
+      rmarkdown::render(input,
+                        output_format = "beamer_presentation",
+                        output_file = "misc.pdf",
+                        output_dir = dirname(dirname(input)),
+                        quiet = TRUE)
+  }
+
+  pre_processor <- function(metadata, input_file, runtime, knit_meta,
+                            files_dir, output_dir) {
+    if (!file.exists(files_dir))
+      dir.create(files_dir)
+    file.copy(logo_file,  files_dir, recursive = TRUE)
+  }
+
+  res <- rmarkdown::output_format(
+    knitr = NULL,
+    pandoc = NULL,
+    pre_knit = pre_knit,
+    pre_processor = pre_processor,
+    ## Note that here `theme` and `highlight` are just parameters to make
+    ## the HTML document tiny
+    ## The real `theme` and `highlight` passed to html_pretty() are
+    ## reflected in the final CSS file. Here `css` is set to NULL, but
+    ## it will be set in the pre_processor() hook
+    base_format = rmarkdown::beamer_presentation(template = template_file,
+                                                   highlight = "kate",
+                                                   latex_engine = "pdflatex")
+  )
+
 }
