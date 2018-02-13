@@ -19,7 +19,7 @@ stats_presentation <- function() {
                               'beamer.tex',
                               package = "StatsPresentation")
 
-  img_dir  <- system.file("resources", "images", package = "prettydoc")
+  img_dir  <- system.file("resources", "images", package = "StatsPresentation")
 
   pre_processor <- function(metadata, input_file, runtime, knit_meta,
                             files_dir, output_dir) {
