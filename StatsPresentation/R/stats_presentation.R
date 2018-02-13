@@ -56,4 +56,6 @@ stats_presentation <- function() {
                                                    latex_engine = "pdflatex")
   )
 
+  res
+
 }
