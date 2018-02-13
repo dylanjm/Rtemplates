@@ -21,13 +21,6 @@ stats_presentation <- function() {
 
   img_dir  <- system.file("resources", "images", package = "prettydoc")
 
-  pre_knit <- function(input, ...) {
-      rmarkdown::render(input,
-                        output_format = "beamer_presentation",
-                        output_dir = dirname(dirname(input)),
-                        quiet = TRUE)
-  }
-
   pre_processor <- function(metadata, input_file, runtime, knit_meta,
                             files_dir, output_dir) {
     if (!file.exists(files_dir))
@@ -38,7 +31,6 @@ stats_presentation <- function() {
   res <- rmarkdown::output_format(
     knitr = NULL,
     pandoc = NULL,
-    pre_knit = pre_knit,
     pre_processor = pre_processor,
     ## Note that here `theme` and `highlight` are just parameters to make
     ## the HTML document tiny
