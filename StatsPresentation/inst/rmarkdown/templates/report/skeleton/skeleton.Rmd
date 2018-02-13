@@ -4,7 +4,7 @@ subtitle: "Test Review"
 author: "Craig Johnson"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output: 
-  StatsPresentation::stats_presentation(): default
+  StatsPresentation::stats_presentation: default
   pdf_document: default
 ---
 

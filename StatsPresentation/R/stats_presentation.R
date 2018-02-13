@@ -19,6 +19,13 @@ stats_presentation <- function() {
                               'beamer.tex',
                               package = "StatsPresentation")
 
+  logo_file = system.file('rmarkdown',
+                          'templates',
+                          'report',
+                          'resources',
+                          'byuilogo.png',
+                          package = "StatsPresentation")
+
   # call the base pdf_document function
   rmarkdown::beamer_presentation(template = template_file,
                           highlight = "kate",
