@@ -3,6 +3,7 @@ title: "Bayesian Statistics"
 subtitle: "Test Review"
 author: "Craig Johnson"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
+logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Brigham_Young_University%E2%80%93Idaho_medallion.svg/1200px-Brigham_Young_University%E2%80%93Idaho_medallion.svg.png"
 output: 
   StatsPresentation::stats_presentation: default
   pdf_document: default
