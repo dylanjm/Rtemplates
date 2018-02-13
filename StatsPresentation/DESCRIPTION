@@ -1,9 +1,9 @@
 Package: StatsPresentation
-Title: What the Package Does (one line, title case)
+Title: Presentation Template for Bayesian Stats
 Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-Depends: R (>= 3.4.3)
+Authors@R: person("Dylan", "McDowell", email = "dyla.mcdowell226@gmail.com", role = c("aut", "cre"))
+Description: A template package to create beamer presentations for Bayesian Statistics for a Professor. 
+Depends: R (>= 3.4.2)
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
