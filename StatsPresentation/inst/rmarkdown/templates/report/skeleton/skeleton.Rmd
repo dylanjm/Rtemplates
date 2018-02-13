@@ -1,0 +1,62 @@
+---
+title: "Bayesian Statistics"
+subtitle: "Test Review"
+author: "Craig Johnson"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: 
+  StatsPresentation::stats_presentation(): default
+  pdf_document: default
+---
+
+# Math 423 Review
+
+## Fisher Information
+
+\[
+I(\theta) = Var\left(\dfrac{d}{d\theta}\log{f(x;\theta)}\right) = -E\left[\dfrac{d^{2}}{d\theta^{2}}\log{f(x;\theta)}\right]
+\]
+
+## Cramer-Rao Enequality Theorem
+
+If $X_{1},\ldots,X_{n}$ is a random sample from a distribution where the support of $f(x;\theta)$ does not depend on $\theta$, then for any unbaised estimator $\hat{\theta}$:
+\[
+Var(\hat{\theta}) \geq \dfrac{1}{I(\theta)}
+\]
+
+## Sampling Methods
+
+- Bootstrapping
+  - Assume sample is the population
+  - Randomly draw from the data (with replacement) n number of times
+- Jack Knife
+  - Leave out one data point and sample
+  - Repeat
+
+## Bootstrapping in R
+
+```{r}
+# Observed data
+obs <- c(88.0, 76.7, 63.3, 68.4, 60.3, 57.7, 62.9)
+n <-  length(obs)
+# Number of bootstrap resamples to collect
+nBoot <-  20000
+# Initialize vector of sample means
+xbar <-  rep(0, nBoot)
+# Calculate the bootstrap means
+for(i in 1:nBoot) {x = sample(obs, n, replace = T); xbar[i] = mean(x)}
+# Find the 2.5th and 97.5th percentiles
+pander::pander(quantile(xbar,c(0.025, 0.975)))
+```
+
+## Histogram Plot
+
+```{r, fig.height=5}
+nrv <- rnorm(5000, 2, 6)
+d <- density(nrv)
+hist(nrv, probability = TRUE)
+lines(d$x, d$y)
+```
+
+# Priors \& Posteriors
+
+## 2nd Section Slides
