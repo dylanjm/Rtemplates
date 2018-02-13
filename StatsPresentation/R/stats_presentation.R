@@ -32,7 +32,7 @@ stats_presentation <- function() {
                             files_dir, output_dir) {
     if (!file.exists(files_dir))
       dir.create(files_dir)
-    file.copy(logo_file,  files_dir, recursive = TRUE)
+    file.copy(img_dir,  files_dir, recursive = TRUE)
   }
 
   res <- rmarkdown::output_format(
