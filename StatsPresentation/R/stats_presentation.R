@@ -19,17 +19,11 @@ stats_presentation <- function() {
                               'beamer.tex',
                               package = "StatsPresentation")
 
-  logo_file = system.file('rmarkdown',
-                          'templates',
-                          'report',
-                          'resources',
-                          'byuilogo.png',
-                          package = "StatsPresentation")
+  img_dir  <- system.file("resources", "images", package = "prettydoc")
 
   pre_knit <- function(input, ...) {
       rmarkdown::render(input,
                         output_format = "beamer_presentation",
-                        output_file = "misc.pdf",
                         output_dir = dirname(dirname(input)),
                         quiet = TRUE)
   }
