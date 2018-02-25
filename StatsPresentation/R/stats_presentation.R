@@ -27,6 +27,6 @@ stats_presentation <- function() {
   base_format = rmarkdown::beamer_presentation(template = template_file,
                                                highlight = "kate",
                                                latex_engine = "pdflatex",
-                                               pandoc_args = paste0("logo:", image_file))
+                                               pandoc_args = c("--variable", paste0("logo:\'", image_file,"\'")))
 
 }
