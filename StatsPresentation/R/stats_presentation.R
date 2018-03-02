@@ -21,6 +21,7 @@ stats_presentation <- function() {
 
   base_format = rmarkdown::beamer_presentation(template = template_file,
                                                highlight = "kate",
-                                               latex_engine = "pdflatex")
+                                               latex_engine = "pdflatex",
+                                               slide_level = 2)
 
 }
