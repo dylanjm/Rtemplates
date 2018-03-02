@@ -19,14 +19,8 @@ stats_presentation <- function() {
                               'beamer.tex',
                               package = "StatsPresentation")
 
-  image_file = system.file('resources',
-                           'images',
-                           'byuilogo.png',
-                           package = "StatsPresentation")
-
   base_format = rmarkdown::beamer_presentation(template = template_file,
                                                highlight = "kate",
-                                               latex_engine = "pdflatex",
-                                               pandoc_args = c("--variable", paste("logo:", image_file)))
+                                               latex_engine = "pdflatex")
 
 }
