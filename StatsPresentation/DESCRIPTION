@@ -3,7 +3,7 @@ Title: Presentation Template for Bayesian Stats
 Version: 0.0.0.9000
 Authors@R: person("Dylan", "McDowell", email = "dyla.mcdowell226@gmail.com", role = c("aut", "cre"))
 Description: A template package to create beamer presentations for Bayesian Statistics for a Professor. 
-Depends: R (>= 3.4.2)
+Depends: R (>= 3.4.20)
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
