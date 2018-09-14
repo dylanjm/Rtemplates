@@ -157,7 +157,7 @@ $endif$
 \newcommand{\hmwkTitle}{$title$}
 \newcommand{\hmwkDueDate}{$due$}
 \newcommand{\hmwkClass}{$class$}
-\newcommand{\hmwkClassTime}{- Section 01}
+\newcommand{\hmwkClassTime}{- Section $section$}
 \newcommand{\hmwkClassInstructor}{Professor $professor$}
 \newcommand{\hmwkAuthorName}{\textbf{$author$}}
 
@@ -201,8 +201,10 @@ $endif$
 % Solution Environment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newenvironment{solution}
-  {\textbf{Solution:} \begin{tcolorbox}[title=Solution,colback=white]}
+  {\begin{tcolorbox}[title=Solution:,colback=white]}
   {\end{tcolorbox}}
+
+\newcommand{\exercise}[1]{\section{\underline{Exercise #1}}}
 
 
 \pagestyle{fullstyle}
