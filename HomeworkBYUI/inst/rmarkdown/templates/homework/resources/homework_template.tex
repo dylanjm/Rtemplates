@@ -62,6 +62,12 @@
 \usepackage{tabularx}
 \usepackage[symbol]{footmisc}
 
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes}
+\newcommand{\mymk}[1]{%
+	\tikz[baseline=(char.base)]\node[anchor=south west, draw, rectangle, rounded corners, inner sep=1pt, minimum size=5mm,
+	text height=3mm](char){\ensuremath{#1}} ;}
+
 \newcommand{\mathcolorbox}[2]{\colorbox{#1}{$$\displaystyle #2$$}}
 \newcommand\proba{P(A)}
 \newcommand\probb{P(B)}
