@@ -7,7 +7,7 @@
 # used to abstract away YAML settings from students.
 # Creates a minimalistic YAML in the template and also
 # allows for quick changes and better customization.
-#
+#' @export
 # TODO:
 # - Develop a possible TeX header
 
