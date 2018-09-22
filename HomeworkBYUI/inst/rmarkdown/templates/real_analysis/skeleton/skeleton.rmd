@@ -10,7 +10,7 @@ due: "date"
 topic: "problems"
 misc: "problems"
 title-page: false
-output: HomeworkBYUI::real_analysis_template
+output: HomeworkBYUI::real_analysis_pdf
 ---
 <!-- Question 01 -->
 \exercise{}
