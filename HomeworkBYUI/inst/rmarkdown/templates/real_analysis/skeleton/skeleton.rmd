@@ -1,7 +1,37 @@
 ---
-title: "Untitled"
-author: "McDowell, Dylan"
+title: "HW #"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
-output: HomeworkBYUI::real_analysis_pdf
+author: "Dylan McDowell"
+class: "Math 461"
+hours: "1.5 Hours"
+section: "01"
+professor: "Lawrence Chilton"
+due: "date"
+topic: "problems"
+misc: "problems"
+title-page: false
+output: HomeworkBYUI::real_analysis_template
 ---
+<!-- Question 01 -->
+\exercise{}
 
+<!-- Question 02 -->
+\exercise{}
+
+<!-- Question 03 -->
+\exercise{}
+
+<!-- Question 04 -->
+\exercise{}
+
+<!-- Question 05 -->
+\exercise{}
+
+<!-- Question 06 -->
+\exercise{}
+
+<!-- Question 06 -->
+\exercise{}
+
+<!-- Question 07 -->
+\exercise{}
