@@ -6,7 +6,7 @@ class: "Math 461"
 hours: "1.5 Hours"
 section: "01"
 professor: "Lawrence Chilton"
-due: "date"
+due: "`r format(Sys.time(), '%B %d, %Y')`"
 topic: "problems"
 misc: "problems"
 title-page: false
