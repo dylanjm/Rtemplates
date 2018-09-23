@@ -18,20 +18,26 @@ output: HomeworkBYUI::real_analysis_pdf
 <!-- Question 02 -->
 \exercise{}
 
+\newpage
 <!-- Question 03 -->
 \exercise{}
 
+\newpage
 <!-- Question 04 -->
 \exercise{}
 
+\newpage
 <!-- Question 05 -->
 \exercise{}
 
+\newpage
 <!-- Question 06 -->
 \exercise{}
 
+\newpage
 <!-- Question 06 -->
 \exercise{}
 
+\newpage
 <!-- Question 07 -->
 \exercise{}
